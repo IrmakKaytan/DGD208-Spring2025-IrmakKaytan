@@ -1,10 +1,13 @@
-using ByteMonster;
+using System;
 
-class Program
+namespace DGD208_Spring2025_IrmakKaytan
 {
-    static void Main(string[] args)
+    class Program
     {
-        var game = new Game();
-        game.Run();
+        static void Main(string[] args)
+        {
+            var game = new Game();
+            game.Run();
+        }
     }
 }

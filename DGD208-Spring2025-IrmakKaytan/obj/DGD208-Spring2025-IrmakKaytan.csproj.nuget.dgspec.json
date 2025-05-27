@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj": {}
+    "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj": {}
   },
   "projects": {
-    "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj": {
+    "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj",
+        "projectUniqueName": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj",
         "projectName": "DGD208-Spring2025-IrmakKaytan",
-        "projectPath": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj",
+        "projectPath": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj",
         "packagesPath": "C:\\Users\\IRMAK\\.nuget\\packages\\",
-        "outputPath": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\obj\\",
+        "outputPath": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IRMAK\\AppData\\Roaming\\NuGet\\NuGet.Config",

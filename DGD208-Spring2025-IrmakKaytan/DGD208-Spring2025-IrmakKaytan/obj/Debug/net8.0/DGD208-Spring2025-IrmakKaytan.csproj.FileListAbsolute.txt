@@ -1,0 +1,15 @@
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.GeneratedMSBuildEditorConfig.editorconfig
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.AssemblyInfoInputs.cache
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.AssemblyInfo.cs
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.csproj.CoreCompileInputs.cache
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.sourcelink.json
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\bin\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.exe
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\bin\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.deps.json
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\bin\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.runtimeconfig.json
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\bin\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.dll
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\bin\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.pdb
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.dll
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\refint\DGD208-Spring2025-IrmakKaytan.dll
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.pdb
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\DGD208-Spring2025-IrmakKaytan.genruntimeconfig.cache
+D:\3.SINIF\Bahar\Game Programming 2\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\DGD208-Spring2025-IrmakKaytan\obj\Debug\net8.0\ref\DGD208-Spring2025-IrmakKaytan.dll

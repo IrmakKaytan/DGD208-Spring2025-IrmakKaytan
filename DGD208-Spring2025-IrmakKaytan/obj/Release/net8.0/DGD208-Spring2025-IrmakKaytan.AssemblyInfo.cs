@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("DGD208-Spring2025-IrmakKaytan")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+046d83f79781c64127d02694f3489d8beb19aab7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77f72c3316ff1f491cb24323c31fbaac9231216c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DGD208-Spring2025-IrmakKaytan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DGD208-Spring2025-IrmakKaytan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

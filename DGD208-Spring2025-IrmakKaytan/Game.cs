@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DGD208_Spring2025_IrmakKaytan;
 
@@ -8,6 +9,7 @@ public class Game
     private readonly Menu mainMenu;
     private bool isRunning;
     private List<Pet> adoptedPets;
+    private List<Item> availableItems;
 
     public Game()
     {
@@ -21,6 +23,17 @@ public class Game
         });
         adoptedPets = new List<Pet>();
         isRunning = true;
+        InitializeItems();
+    }
+
+    private void InitializeItems()
+    {
+        availableItems = new List<Item>
+        {
+            new Item("RAM Stick", ItemType.RAM, 20, 2000),
+            new Item("CPU Core", ItemType.CPU, 20, 2000),
+            new Item("Hard Drive Space", ItemType.DiskSpace, 20, 2000)
+        };
     }
 
     public void Run()
@@ -103,9 +116,70 @@ public class Game
         }
     }
 
-    private void ShowUseItemMenu()
+    private async void ShowUseItemMenu()
     {
-        Console.WriteLine("Use System Resource menu will be implemented later.");
+        Console.Clear();
+        if (adoptedPets.Count == 0)
+        {
+            Console.WriteLine("You haven't adopted any viruses yet!");
+            return;
+        }
+
+        // Show pet selection menu
+        Console.WriteLine("Select a virus to use an item on:");
+        for (int i = 0; i < adoptedPets.Count; i++)
+        {
+            var pet = adoptedPets[i];
+            Console.WriteLine($"{i + 1}. {pet.Name} ({pet.Type})");
+        }
+        Console.WriteLine($"{adoptedPets.Count + 1}. Back to main menu");
+
+        var petChoice = Console.ReadLine();
+        if (!int.TryParse(petChoice, out int selectedPetIndex) || 
+            selectedPetIndex < 1 || 
+            selectedPetIndex > adoptedPets.Count + 1)
+        {
+            return;
+        }
+
+        if (selectedPetIndex == adoptedPets.Count + 1)
+        {
+            return;
+        }
+
+        var selectedPet = adoptedPets[selectedPetIndex - 1];
+
+        // Show item selection menu
+        Console.WriteLine("\nSelect an item to use:");
+        for (int i = 0; i < availableItems.Count; i++)
+        {
+            var item = availableItems[i];
+            Console.WriteLine($"{i + 1}. {item.Name}");
+        }
+        Console.WriteLine($"{availableItems.Count + 1}. Back");
+
+        var itemChoice = Console.ReadLine();
+        if (!int.TryParse(itemChoice, out int selectedItemIndex) || 
+            selectedItemIndex < 1 || 
+            selectedItemIndex > availableItems.Count + 1)
+        {
+            return;
+        }
+
+        if (selectedItemIndex == availableItems.Count + 1)
+        {
+            return;
+        }
+
+        var selectedItem = availableItems[selectedItemIndex - 1];
+        await selectedItem.Use(selectedPet);
+
+        // Check if pet died after using the item
+        if (!selectedPet.IsAlive())
+        {
+            Console.WriteLine($"\n{selectedPet.Name} has died!");
+            adoptedPets.Remove(selectedPet);
+        }
     }
 
     private void ShowAbout()

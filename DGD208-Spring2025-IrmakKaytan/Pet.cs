@@ -19,31 +19,31 @@ namespace DGD208_Spring2025_IrmakKaytan
             Fun = 50;
         }
 
-        // Methods will be implemented in future iterations
         public void DecreaseStats()
         {
-            // To be implemented
+            Hunger = Math.Max(0, Hunger - 1);
+            Sleep = Math.Max(0, Sleep - 1);
+            Fun = Math.Max(0, Fun - 1);
         }
 
         public void IncreaseHunger(int amount)
         {
-            // To be implemented
+            Hunger = Math.Min(100, Hunger + amount);
         }
 
         public void IncreaseSleep(int amount)
         {
-            // To be implemented
+            Sleep = Math.Min(100, Sleep + amount);
         }
 
         public void IncreaseFun(int amount)
         {
-            // To be implemented
+            Fun = Math.Min(100, Fun + amount);
         }
 
         public bool IsAlive()
         {
-            // To be implemented
-            return true;
+            return Hunger > 0 && Sleep > 0 && Fun > 0;
         }
     }
 } 

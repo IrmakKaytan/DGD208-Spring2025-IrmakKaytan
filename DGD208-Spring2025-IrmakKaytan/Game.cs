@@ -33,9 +33,12 @@ public class Game
     {
         availableItems = new List<Item>
         {
-            new Item("RAM Stick", ItemType.RAM, 20, 2000),
-            new Item("CPU Core", ItemType.CPU, 20, 2000),
-            new Item("Hard Drive Space", ItemType.DiskSpace, 20, 2000)
+            new Item("RAM Stick", ItemType.RAM, 2000,
+                "Memory supplement satiates the virus's appetite but deprives it of sleep."),
+            new Item("CPU Core", ItemType.CPU, 2000,
+                "It relaxes the processor, gives it a rest, but leaves it hungry and bored."),
+            new Item("Hard Drive Space", ItemType.DiskSpace, 2000,
+                "Once storage space is provided, things generally pick up a bit.")
         };
     }
 
@@ -46,7 +49,7 @@ public class Game
         {
             while (!statDecreaseCts.Token.IsCancellationRequested)
             {
-                await Task.Delay(1000, statDecreaseCts.Token); // Wait for 1 second
+                await Task.Delay(12000, statDecreaseCts.Token); // Wait for 12 seconds (5 times per minute)
                 
                 lock (adoptedPets) // Thread-safe access to the list
                 {

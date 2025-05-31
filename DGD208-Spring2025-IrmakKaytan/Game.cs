@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace DGD208_Spring2025_IrmakKaytan;
 
@@ -10,6 +11,7 @@ public class Game
     private bool isRunning;
     private List<Pet> adoptedPets;
     private List<Item> availableItems;
+    private CancellationTokenSource statDecreaseCts;
 
     public Game()
     {
@@ -24,6 +26,7 @@ public class Game
         adoptedPets = new List<Pet>();
         isRunning = true;
         InitializeItems();
+        StartStatDecreaseTask();
     }
 
     private void InitializeItems()
@@ -34,6 +37,33 @@ public class Game
             new Item("CPU Core", ItemType.CPU, 20, 2000),
             new Item("Hard Drive Space", ItemType.DiskSpace, 20, 2000)
         };
+    }
+
+    private void StartStatDecreaseTask()
+    {
+        statDecreaseCts = new CancellationTokenSource();
+        Task.Run(async () =>
+        {
+            while (!statDecreaseCts.Token.IsCancellationRequested)
+            {
+                await Task.Delay(1000, statDecreaseCts.Token); // Wait for 1 second
+                
+                lock (adoptedPets) // Thread-safe access to the list
+                {
+                    for (int i = adoptedPets.Count - 1; i >= 0; i--)
+                    {
+                        var pet = adoptedPets[i];
+                        pet.DecreaseStats();
+                        
+                        if (!pet.IsAlive())
+                        {
+                            Console.WriteLine($"\n{pet.Name} has died!");
+                            adoptedPets.RemoveAt(i);
+                        }
+                    }
+                }
+            }
+        }, statDecreaseCts.Token);
     }
 
     public void Run()
@@ -62,6 +92,7 @@ public class Game
                     break;
                 case 5:
                     isRunning = false;
+                    statDecreaseCts.Cancel(); // Stop the background task
                     break;
             }
 

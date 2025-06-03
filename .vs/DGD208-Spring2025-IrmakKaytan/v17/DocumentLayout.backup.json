@@ -21,6 +21,10 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Item.cs",
@@ -30,12 +34,7 @@
               "RelativeToolTip": "DGD208-Spring2025-IrmakKaytan\\Item.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA1wAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T17:30:00.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-05-31T17:30:00.784Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "DGD208-Spring2025-IrmakKaytan\\Game.cs",
               "ToolTip": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\Game.cs",
               "RelativeToolTip": "DGD208-Spring2025-IrmakKaytan\\Game.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwDQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwCYAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T16:04:55.222Z",
               "EditorCaption": ""

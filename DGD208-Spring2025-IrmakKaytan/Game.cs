@@ -34,11 +34,11 @@ public class Game
         availableItems = new List<Item>
         {
             new Item("RAM Stick", ItemType.RAM, 2000,
-                "Memory supplement satiates the virus's appetite but deprives it of sleep."),
+                "Memory supplements satiate the virus's appetite but deprive it of sleep."),
             new Item("CPU Core", ItemType.CPU, 2000,
                 "It relaxes the processor, gives it a rest, but leaves it hungry and bored."),
-            new Item("Hard Drive Space", ItemType.DiskSpace, 2000,
-                "Once storage space is provided, things generally pick up a bit.")
+            new Item("Hard Drive Space", ItemType.DiskSpace, 2000, 
+                "With more storage to explore, the virus has the time of its life—so much that it forgets to eat and loses sleep over the excitement.")
         };
     }
 
@@ -61,6 +61,12 @@ public class Game
                         if (!pet.IsAlive())
                         {
                             Console.WriteLine($"\n{pet.Name} has died!");
+                            Console.WriteLine($"Type: {pet.Type}");
+                            Console.WriteLine($"Final Stats:");
+                            Console.WriteLine($"- Hunger: {pet.Hunger}");
+                            Console.WriteLine($"- Sleep: {pet.Sleep}");
+                            Console.WriteLine($"- Fun: {pet.Fun}");
+                            Console.WriteLine("\nPress any key to continue...");
                             adoptedPets.RemoveAt(i);
                         }
                     }
@@ -111,9 +117,26 @@ public class Game
     {
         Console.Clear();
         Console.WriteLine("Choose a virus to adopt:");
-        Console.WriteLine("1. MemoryEater - A RAM-consuming virus");
-        Console.WriteLine("2. FunMiner - A CPU-intensive virus");
-        Console.WriteLine("3. SleepCrawler - A background process virus");
+        Console.WriteLine();
+        
+        Console.WriteLine("1. MemoryEater – A RAM-consuming virus");
+        Console.WriteLine("   \"This glutton lives in your RAM and snacks on memory sticks like candy.");
+        Console.WriteLine("   It gets hungry fast, but doesn't need much fun or sleep.\"");
+        Console.WriteLine("   Strategy Tip: Feed it often or it'll vanish into the void.");
+        Console.WriteLine();
+        
+        Console.WriteLine("2. FunMiner – A CPU-intensive virus");
+        Console.WriteLine("   \"All it wants is entertainment! This virus hijacks your processor just to play silly games.");
+        Console.WriteLine("   Constantly bored, a little bit hungry, and okay with staying up late.\"");
+        Console.WriteLine("   Strategy Tip: Keep it amused or it'll get bored to death. Literally.");
+        Console.WriteLine();
+        
+        Console.WriteLine("3. SleepCrawler – A background process virus");
+        Console.WriteLine("   \"Runs quietly in the background... until it crashes from exhaustion.");
+        Console.WriteLine("   Needs lots of sleep, isn't very hungry, and occasionally wants some fun.\"");
+        Console.WriteLine("   Strategy Tip: Let it rest often or you'll watch it burn out like a forgotten laptop.");
+        Console.WriteLine();
+        
         Console.WriteLine("4. Back to main menu");
 
         var choice = Console.ReadLine();
@@ -183,12 +206,14 @@ public class Game
 
         var selectedPet = adoptedPets[selectedPetIndex - 1];
 
-        // Show item selection menu
+        // Show item selection menu with descriptions
         Console.WriteLine("\nSelect an item to use:");
         for (int i = 0; i < availableItems.Count; i++)
         {
             var item = availableItems[i];
             Console.WriteLine($"{i + 1}. {item.Name}");
+            Console.WriteLine($"   {item.Description}");
+            Console.WriteLine();
         }
         Console.WriteLine($"{availableItems.Count + 1}. Back");
 
@@ -212,6 +237,12 @@ public class Game
         if (!selectedPet.IsAlive())
         {
             Console.WriteLine($"\n{selectedPet.Name} has died!");
+            Console.WriteLine($"Type: {selectedPet.Type}");
+            Console.WriteLine($"Final Stats:");
+            Console.WriteLine($"- Hunger: {selectedPet.Hunger}");
+            Console.WriteLine($"- Sleep: {selectedPet.Sleep}");
+            Console.WriteLine($"- Fun: {selectedPet.Fun}");
+            Console.WriteLine("\nPress any key to continue...");
             adoptedPets.Remove(selectedPet);
         }
     }

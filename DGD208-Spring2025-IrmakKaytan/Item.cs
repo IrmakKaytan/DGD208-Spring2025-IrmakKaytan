@@ -53,13 +53,13 @@ namespace DGD208_Spring2025_IrmakKaytan
                     Console.WriteLine($"Fun: -10");
                     break;
                 case ItemType.DiskSpace:
-                    pet.IncreaseHunger(15);
-                    pet.IncreaseSleep(10);
-                    pet.IncreaseFun(5);
+                    pet.IncreaseHunger(-10);
+                    pet.IncreaseSleep(-20);
+                    pet.IncreaseFun(35);
                     Console.WriteLine($"{pet.Name}'s stats changed:");
-                    Console.WriteLine($"Hunger: +15");
-                    Console.WriteLine($"Sleep: +10");
-                    Console.WriteLine($"Fun: +5");
+                    Console.WriteLine($"Hunger: -10");
+                    Console.WriteLine($"Sleep: -20");
+                    Console.WriteLine($"Fun: +35");
                     break;
             }
         }

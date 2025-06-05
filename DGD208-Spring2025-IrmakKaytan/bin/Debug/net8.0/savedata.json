@@ -1,0 +1,26 @@
+{
+  "Pets": [
+    {
+      "Name": "Hungery",
+      "Type": 0,
+      "Hunger": 30,
+      "Sleep": 40,
+      "Fun": 65
+    },
+    {
+      "Name": "Crazy",
+      "Type": 1,
+      "Hunger": 46,
+      "Sleep": 41,
+      "Fun": 46
+    },
+    {
+      "Name": "SleepinBeauty",
+      "Type": 2,
+      "Hunger": 42,
+      "Sleep": 54,
+      "Fun": 52
+    }
+  ],
+  "SaveTime": "2025-06-06T00:27:11.4863297+03:00"
+}

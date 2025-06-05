@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Text.Json;
+using System.IO;
 
 namespace DGD208_Spring2025_IrmakKaytan;
 
@@ -12,6 +14,7 @@ public class Game
     private List<Pet> adoptedPets;
     private List<Item> availableItems;
     private CancellationTokenSource statDecreaseCts;
+    private const string SAVE_FILE = "savedata.json";
 
     public Game()
     {
@@ -20,8 +23,10 @@ public class Game
             "1. Adopt a Virus",
             "2. View Your Viruses",
             "3. Use System Resource",
-            "4. About",
-            "5. Exit"
+            "4. Save Game",
+            "5. Load Game",
+            "6. About",
+            "7. Exit"
         });
         adoptedPets = new List<Pet>();
         isRunning = true;
@@ -97,9 +102,15 @@ public class Game
                     ShowUseItemMenu();
                     break;
                 case 4:
-                    ShowAbout();
+                    SaveGame();
                     break;
                 case 5:
+                    LoadGame();
+                    break;
+                case 6:
+                    ShowAbout();
+                    break;
+                case 7:
                     isRunning = false;
                     statDecreaseCts.Cancel(); // Stop the background task
                     break;
@@ -254,4 +265,66 @@ public class Game
         Console.WriteLine("Student Number: 2305041084");
     }
 
+    private void SaveGame()
+    {
+        try
+        {
+            var saveData = new SaveData();
+            foreach (var pet in adoptedPets)
+            {
+                saveData.Pets.Add(new PetData(pet));
+            }
+
+            string jsonString = JsonSerializer.Serialize(saveData, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(SAVE_FILE, jsonString);
+            Console.WriteLine("\nGame saved successfully!");
+            Console.WriteLine($"Save time: {saveData.SaveTime}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"\nError saving game: {ex.Message}");
+        }
+    }
+
+    private void LoadGame()
+    {
+        try
+        {
+            if (!File.Exists(SAVE_FILE))
+            {
+                Console.WriteLine("\nNo save file found!");
+                return;
+            }
+
+            string jsonString = File.ReadAllText(SAVE_FILE);
+            var saveData = JsonSerializer.Deserialize<SaveData>(jsonString);
+
+            if (saveData == null || saveData.Pets.Count == 0)
+            {
+                Console.WriteLine("\nSave file is empty or corrupted!");
+                return;
+            }
+
+            // Stop the current stat decrease task
+            statDecreaseCts.Cancel();
+            
+            // Clear current pets and load saved ones
+            adoptedPets.Clear();
+            foreach (var petData in saveData.Pets)
+            {
+                adoptedPets.Add(petData.ToPet());
+            }
+
+            // Restart the stat decrease task
+            StartStatDecreaseTask();
+
+            Console.WriteLine("\nGame loaded successfully!");
+            Console.WriteLine($"Save time: {saveData.SaveTime}");
+            Console.WriteLine($"Loaded {adoptedPets.Count} viruses");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"\nError loading game: {ex.Message}");
+        }
+    }
 }

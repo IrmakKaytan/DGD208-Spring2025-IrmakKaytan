@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{B38D1DB5-3228-407C-9E77-AD75AA1AFE0E}|DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj|solutionrelative:dgd208-spring2025-irmakkaytan\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B38D1DB5-3228-407C-9E77-AD75AA1AFE0E}|DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj|d:\\3.sinif\\bahar\\game programming 2\\dgd208-spring2025-irmakkaytan\\dgd208-spring2025-irmakkaytan\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38D1DB5-3228-407C-9E77-AD75AA1AFE0E}|DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj|solutionrelative:dgd208-spring2025-irmakkaytan\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B38D1DB5-3228-407C-9E77-AD75AA1AFE0E}|DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj|d:\\3.sinif\\bahar\\game programming 2\\dgd208-spring2025-irmakkaytan\\dgd208-spring2025-irmakkaytan\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B38D1DB5-3228-407C-9E77-AD75AA1AFE0E}|DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan.csproj|solutionrelative:dgd208-spring2025-irmakkaytan\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SaveData.cs",
+              "DocumentMoniker": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\SaveData.cs",
+              "RelativeDocumentMoniker": "DGD208-Spring2025-IrmakKaytan\\SaveData.cs",
+              "ToolTip": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\SaveData.cs",
+              "RelativeToolTip": "DGD208-Spring2025-IrmakKaytan\\SaveData.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T21:19:41.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\Item.cs",
               "RelativeDocumentMoniker": "DGD208-Spring2025-IrmakKaytan\\Item.cs",
@@ -44,7 +61,7 @@
               "RelativeDocumentMoniker": "DGD208-Spring2025-IrmakKaytan\\Game.cs",
               "ToolTip": "D:\\3.SINIF\\Bahar\\Game Programming 2\\DGD208-Spring2025-IrmakKaytan\\DGD208-Spring2025-IrmakKaytan\\Game.cs",
               "RelativeToolTip": "DGD208-Spring2025-IrmakKaytan\\Game.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwCYAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwCYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T16:04:55.222Z",
               "EditorCaption": ""

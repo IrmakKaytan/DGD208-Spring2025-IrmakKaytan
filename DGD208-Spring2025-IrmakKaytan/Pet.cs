@@ -6,9 +6,9 @@ namespace DGD208_Spring2025_IrmakKaytan
     {
         public string Name { get; private set; }
         public PetType Type { get; private set; }
-        public int Hunger { get; private set; }
-        public int Sleep { get; private set; }
-        public int Fun { get; private set; }
+        public int Hunger { get; set; }
+        public int Sleep { get; set; }
+        public int Fun { get; set; }
 
         // Timers for each stat
         private int hungerTimer;

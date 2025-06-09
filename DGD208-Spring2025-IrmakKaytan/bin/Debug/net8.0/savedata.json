@@ -1,26 +1,26 @@
 {
   "Pets": [
     {
-      "Name": "Hungery",
+      "Name": "",
       "Type": 0,
-      "Hunger": 30,
-      "Sleep": 40,
-      "Fun": 65
+      "Hunger": 46,
+      "Sleep": 49,
+      "Fun": 49
     },
     {
-      "Name": "Crazy",
+      "Name": "",
       "Type": 1,
-      "Hunger": 46,
-      "Sleep": 41,
+      "Hunger": 48,
+      "Sleep": 49,
       "Fun": 46
     },
     {
-      "Name": "SleepinBeauty",
+      "Name": "",
       "Type": 2,
-      "Hunger": 42,
-      "Sleep": 54,
-      "Fun": 52
+      "Hunger": 50,
+      "Sleep": 48,
+      "Fun": 49
     }
   ],
-  "SaveTime": "2025-06-06T00:27:11.4863297+03:00"
+  "SaveTime": "2025-06-09T22:33:36.7371279+03:00"
 }

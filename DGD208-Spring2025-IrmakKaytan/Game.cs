@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Text.Json;
 using System.IO;
+using System.Text;
 
 namespace DGD208_Spring2025_IrmakKaytan;
 
@@ -15,6 +16,28 @@ public class Game
     private List<Item> availableItems;
     private CancellationTokenSource statDecreaseCts;
     private const string SAVE_FILE = "savedata.json";
+
+    private string GetStatBar(int value)
+    {
+        const int BAR_LENGTH = 10;
+        int filledSegments = (int)Math.Round((double)value / 100 * BAR_LENGTH);
+        StringBuilder bar = new StringBuilder();
+        
+        // Add filled segments with spaces between them
+        for (int i = 0; i < BAR_LENGTH; i++)
+        {
+            if (i < filledSegments)
+            {
+                bar.Append("█ ");
+            }
+            else
+            {
+                bar.Append("░ ");
+            }
+        }
+        
+        return bar.ToString().TrimEnd();
+    }
 
     public Game()
     {
@@ -68,9 +91,9 @@ public class Game
                             Console.WriteLine($"\n{pet.Name} has died!");
                             Console.WriteLine($"Type: {pet.Type}");
                             Console.WriteLine($"Final Stats:");
-                            Console.WriteLine($"- Hunger: {pet.Hunger}");
-                            Console.WriteLine($"- Sleep: {pet.Sleep}");
-                            Console.WriteLine($"- Fun: {pet.Fun}");
+                            Console.WriteLine($"   Hunger: {GetStatBar(pet.Hunger)} {pet.Hunger}%");
+                            Console.WriteLine($"   Sleep:  {GetStatBar(pet.Sleep)} {pet.Sleep}%");
+                            Console.WriteLine($"   Fun:    {GetStatBar(pet.Fun)} {pet.Fun}%");
                             Console.WriteLine("\nPress any key to continue...");
                             adoptedPets.RemoveAt(i);
                         }
@@ -178,9 +201,9 @@ public class Game
         {
             var pet = adoptedPets[i];
             Console.WriteLine($"\n{i + 1}. {pet.Name} ({pet.Type})");
-            Console.WriteLine($"   Hunger: {pet.Hunger}");
-            Console.WriteLine($"   Sleep: {pet.Sleep}");
-            Console.WriteLine($"   Fun: {pet.Fun}");
+            Console.WriteLine($"   Hunger: {GetStatBar(pet.Hunger)} {pet.Hunger}%\n");
+            Console.WriteLine($"   Sleep:  {GetStatBar(pet.Sleep)} {pet.Sleep}%\n");
+            Console.WriteLine($"   Fun:    {GetStatBar(pet.Fun)} {pet.Fun}%\n");
         }
     }
 
@@ -198,7 +221,10 @@ public class Game
         for (int i = 0; i < adoptedPets.Count; i++)
         {
             var pet = adoptedPets[i];
-            Console.WriteLine($"{i + 1}. {pet.Name} ({pet.Type})");
+            Console.WriteLine($"\n{i + 1}. {pet.Name} ({pet.Type})");
+            Console.WriteLine($"   Hunger: {GetStatBar(pet.Hunger)} {pet.Hunger}%\n");
+            Console.WriteLine($"   Sleep:  {GetStatBar(pet.Sleep)} {pet.Sleep}%\n");
+            Console.WriteLine($"   Fun:    {GetStatBar(pet.Fun)} {pet.Fun}%\n");
         }
         Console.WriteLine($"{adoptedPets.Count + 1}. Back to main menu");
 
@@ -250,9 +276,9 @@ public class Game
             Console.WriteLine($"\n{selectedPet.Name} has died!");
             Console.WriteLine($"Type: {selectedPet.Type}");
             Console.WriteLine($"Final Stats:");
-            Console.WriteLine($"- Hunger: {selectedPet.Hunger}");
-            Console.WriteLine($"- Sleep: {selectedPet.Sleep}");
-            Console.WriteLine($"- Fun: {selectedPet.Fun}");
+            Console.WriteLine($"   Hunger: {GetStatBar(selectedPet.Hunger)} {selectedPet.Hunger}%");
+            Console.WriteLine($"   Sleep:  {GetStatBar(selectedPet.Sleep)} {selectedPet.Sleep}%");
+            Console.WriteLine($"   Fun:    {GetStatBar(selectedPet.Fun)} {selectedPet.Fun}%");
             Console.WriteLine("\nPress any key to continue...");
             adoptedPets.Remove(selectedPet);
         }
